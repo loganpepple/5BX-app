@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #d32f2f;
+    --primary-light: #ff6659;
+    --primary-dark: #9a0007;
+    --secondary-color: #616161;
+    --secondary-light: #8e8e8e;
+    --secondary-dark: #373737;
+    --light-text: #fafafa;
+    --dark-text: #212121;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+}
