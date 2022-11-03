@@ -9,8 +9,116 @@
     --dark-text: #212121;
 }
 
-body {
+html {
     background-color: var(--primary-color);
     color: var(--light-text);
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    height: 95vh;
+    display: grid;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+@keyframes fade-in {
+    from {
+        position: relative;
+        top: 75px;
+        opacity: 0%;
+    }
+    to {
+        position: relative;
+        top: 0px;
+        opacity: 100%
+    }
+}
+
+@keyframes fade-out {
+    from {
+        position: relative;
+        bottom: 0px;
+        opacity: 100%
+    }
+    to {
+        position: relative;
+        bottom: 75px;
+        opacity: 0%;
+    }
+    
+}
+
+.fade-in {
+    animation-name: fade-in;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+.fade-out {
+    animation-name: fade-out;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+#difficulty-select {
+    width: 100vw;
+    display: grid;
+    align-self: center;
+    align-items: start;
+}
+
+#header {
+    grid-column: 1 / span 2;
+    height: 30vh;
+}
+
+#chart-select {
+    grid-column: 1;
+    margin: 0 20px 0 auto;
+
+}
+
+#level-select {
+    grid-column: 2;
+    margin: 0 auto 0 20px;
+}
+
+#next {
+    grid-column: 1 / span 2;
+    height: 30vh;
+    display: grid;
+    align-items: start;
+}
+
+#help-link {
+    grid-column: 1 / span 2;
+    height: auto;
+    width: 100vw;
+    position: fixed;
+    bottom: 10px;
 }

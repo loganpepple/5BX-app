@@ -1,15 +1,24 @@
-<div>
-    <h1>Select your difficulty:</h1>
-    <div>
-        <h2>Chart:</h2>
-        <button id="chart-up">▲</button>
+<div id="difficulty-select" class="fade-in">
+    <div id="header">
+        <h1>welcome to 5BX</h1>
+        <h3>select your difficulty:</h3>
+    </div>
+
+    <div id="chart-select">
+        <h4>chart:</h4>
+        <button class="change-difficulty up"><span class="material-symbols-outlined">keyboard_arrow_up</span></button>
         <p id="chart-number">1</p>
-        <button id="chart-down">▼</button>
+        <button class="change-difficulty down"><span class="material-symbols-outlined">keyboard_arrow_down</span></button>
     </div>
-    <div>
-        <h2>Level:</h2>
-        <button id="level-up">▲</button>
+
+    <div id="level-select">
+        <h4>level:</h4>
+        <button class="change-difficulty up"><span class="material-symbols-outlined">keyboard_arrow_up</span></button>
         <p id="level-number">D-</p>
-        <button id="level-down">▼</button>
+        <button class="change-difficulty down"><span class="material-symbols-outlined">keyboard_arrow_down</span></button>
     </div>
+
+    <button id="next"><h5>next</h5></button>
+
+    <p id="help-link"><a href="5bx-plan.pdf">help</a></p>
 </div>
