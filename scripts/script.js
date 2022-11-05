@@ -25,10 +25,11 @@ function loadExercise() {
     
 }
 
-function changeDifficulty ({parentNode: {id: parentId, childNodes}, classList}) {
-    const increment = (classList[1] == 'up') ? 1 : -1;
-    const setting = (parentId == 'chart-select') ? 'chart' : 'level';
-    const text = childNodes[5];
+function changeDifficulty ({parentNode, classList}) {
+    const increment = ([...classList].includes('up')) ? 1 : -1;
+    const setting = (parentNode.id == 'chart-select') ? 'chart' : 'level';
+    const text = $(parentNode).find('p');
+    console.log(text);
 
 
     if (setting == 'chart') {
