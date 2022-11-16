@@ -1,0 +1,164 @@
+{
+    "charts": [
+        {
+            "exercises": [
+                {
+                    "reps": [2,3,4,6,7,8,10,12,14,16,18,20],
+                    "description": "Feet astride, arms upward. Forward bend to floor touching then stretch upward and backward bend. Don not strain to keep knees straight."
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                }
+            ],
+            "run": {
+                "distance": "1/2 mile",
+                "time": [8, 7.5, 7, 6.5, 6.5, 6.5, 6, 6, 6, 5.5, 5.5, 5.5]
+            },
+            "walk": {
+                "distance": "1 mile",
+                "time": [21, 21, 20, 19, 19, 19, 18, 18, 18, 17, 17, 17]
+            }
+        },
+        {
+            "exercises": [
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                }
+            ],
+            "run": {
+                "distance": "",
+                "time": []
+            },
+            "walk": {
+                "distance": "",
+                "time": []
+            }
+        },
+        {
+            "exercises": [
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                }
+            ],
+            "run": {
+                "distance": "",
+                "time": []
+            },
+            "walk": {
+                "distance": "",
+                "time": []
+            }
+        },
+        {
+            "exercises": [
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                }
+            ],
+            "run": {
+                "distance": "",
+                "time": []
+            },
+            "walk": {
+                "distance": "",
+                "time": []
+            }
+        },
+        {
+            "exercises": [
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                },
+                {
+                    "reps": [],
+                    "description": ""
+                }
+            ],
+            "run": {
+                "distance": "",
+                "time": []
+            },
+            "walk": {
+                "distance": "",
+                "time": []
+            }
+        }
+    ]
+}

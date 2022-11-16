@@ -17,13 +17,24 @@ function appStart() {
     
 }
 
+function loadPreview() {
+    $('body').load('..views/workoutPreview.html', function() {
+        const exerciseNodes = $('.exercise');
+        exerciseNodes.forEach((exerciseNode, exerciseNumber) => {
+
+        })
+
+        $('#start').click(function() {
+            fadeOut($('#workout-preview'));
+            setTimeout(function() {loadWorkout()}, 700);
+        })
+    })
+}
+
 function loadWorkout() {
 
 }
 
-function loadExercise() {
-    
-}
 
 function changeDifficulty ({parentNode, classList}) {
     const increment = ([...classList].includes('up')) ? 1 : -1;

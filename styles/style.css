@@ -14,7 +14,7 @@ html {
     color: var(--light-text);
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 body {
@@ -92,9 +92,8 @@ h5 {
     align-items: start;
 }
 
-#header {
+#intro-header {
     grid-column: 1 / span 2;
-    height: 30vh;
 }
 
 #chart-select {
