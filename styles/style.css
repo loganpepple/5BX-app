@@ -147,12 +147,38 @@ button {
 #workout-preview {
     display: grid;
     justify-content: center;
+    grid-template-columns: 1fr minmax(500px, 3fr) 1fr;
+    grid-template-rows: 20px auto auto auto auto 20px;
+}
+
+#preview-header {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#exercises {
+    grid-column: 2;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #last-selection {
+    grid-column: 2;
+    grid-row: 4;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto auto auto 1fr;
+}
+
+#submit-buttons {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.exercise {
+    grid-column: 1 / 3;
+    display: grid;
 }
 
 .explanation {

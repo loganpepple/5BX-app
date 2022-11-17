@@ -24,6 +24,7 @@ function appStart() {
 function loadPreview() {
     $('body').load('../views/workoutPreview.html', function() {
         // dynamically change exercise info based on selections
+        $('#preview-header > h2').text(`chart ${selectedChart + 1} level ${levelList[selectedLevel]}`);
         const exerciseNodes = $('.exercise');
         let {exercises, run, walk} = exerciseData[selectedChart];
         [...exerciseNodes].forEach((exerciseNode, exerciseNumber) => {
