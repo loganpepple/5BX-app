@@ -29,7 +29,7 @@ function loadPreview() {
         [...exerciseNodes].forEach((exerciseNode, exerciseNumber) => {
             $(exerciseNode).find('h3').text(exercises[exerciseNumber].reps[selectedLevel]);
             $(exerciseNode).find('.explanation').text(exercises[exerciseNumber].description);
-            // todo: create workout images
+            // todo: create workout images ex: `<img src='./chart-${chart-number}/${exercise}.png'></img>`
         })
         $('#run-div > h5').text(`${run.distance} run in`);
         $('#run-div > h3').text(`${run.time[selectedLevel]} minutes`);
