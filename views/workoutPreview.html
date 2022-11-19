@@ -1,7 +1,8 @@
 <div id="workout-preview" class="fade-in">
     <div id="preview-header">
-        <h2></h2>
+        <h2>chart 1 level D-</h2>
     </div>
+
     <div id ="exercises">
         <div class="exercise">
             <h5>exercise 1</h5>
@@ -52,15 +53,24 @@
             <h3>21 minutes</h3>
         </div>
     </div>
+
     <div id="last-selection">
-        <input type="radio" id="exercise-five" name="last-exercise" checked="checked">
-        <label for="exercise-five">exercise 5</label>
-        <input type="radio" id="run" name="last-exercise">
-        <label for="run">run</label>
-        <input type="radio" id="walk" name="last-exercise">
-        <label for="walk">walk</label>
+        <span></span>
+        <div class="selection" data-label="exercise">
+            <span class="material-symbols-outlined radio-button">radio_button_checked</span>
+            <p>exercise 5</p>
+        </div>
+        <div class="selection" data-label="run">
+            <span class="material-symbols-outlined radio-button">radio_button_unchecked</span>
+            <p>run</p>
+        </div>
+        <div class="selection" data-label="walk">
+            <span class="material-symbols-outlined radio-button">radio_button_unchecked</span>
+            <p>walk</p>
+        </div>
     </div>
-    <div>
+
+    <div id="submit-buttons">
         <button id="cancel">cancel</button>
         <button id="start">start</button>
     </div>

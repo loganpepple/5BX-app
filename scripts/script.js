@@ -24,11 +24,12 @@ function appStart() {
 function loadPreview() {
     $('body').load('../views/workoutPreview.html', function() {
         // dynamically change exercise info based on selections
+        $('#preview-header > h2').text(`chart ${selectedChart + 1} level ${levelList[selectedLevel]}`);
         const exerciseNodes = $('.exercise');
         let {exercises, run, walk} = exerciseData[selectedChart];
         [...exerciseNodes].forEach((exerciseNode, exerciseNumber) => {
             $(exerciseNode).find('h3').text(exercises[exerciseNumber].reps[selectedLevel]);
-            $(exerciseNode).find('.explanation').text(exercises[exerciseNumber].description);
+            $(exerciseNode).find('.explanation').html(exercises[exerciseNumber].description.join('<br />'));
             // todo: create workout images ex: `<img src='./chart-${chart-number}/${exercise}.png'></img>`
         })
         $('#run-div > h5').text(`${run.distance} run in`);
@@ -36,9 +37,10 @@ function loadPreview() {
         $('#walk-div > h5').text(`${walk.distance} walk in`);
         $('#walk-div > h3').text(`${walk.time[selectedLevel]} minutes`);
 
-        $('input').click(function() {
-            finalExercise = this.id;
-            //todo: animate selection
+        $('.selection').click(function() {
+            $('.selection').find('span').text('radio_button_unchecked');
+            $(this).find('span').text('radio_button_checked');
+            finalExercise = this.label;
         })
 
         $('#cancel').click(function() {
@@ -82,8 +84,6 @@ function fadeOut(node) {
     setTimeout(function() {$(node).remove()}, 700);
 }
 
-const chartList = [1,2,3,4,5];
-const levelList = ['D-','D','D+','C-','C','C+','B-','B','B+','A-','A','A+'];
 var selectedChart = 0;
 var selectedLevel = 0;
-var finalExercise = 'exercise-five';
+var finalExercise = 'exercise';
