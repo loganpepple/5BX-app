@@ -36,6 +36,26 @@
     
 }
 
+@keyframes greyed {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes highlighted {
+    from {
+        background: rgba(255, 255, 255, 0);
+        border-radius: 15px;
+    }
+    to {
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 15px;
+    }
+}
+
 html {
     background-color: var(--primary-color);
     color: var(--light-text);
@@ -81,8 +101,8 @@ input[type="radio"]:checked {
     box-shadow: inset 0 2px 2px var(--secondary-dark)
 }
 
-button {
-    cursor: pointer !important;
+button > h5 {
+    cursor: pointer;
 }
 
 .fade-in {
@@ -98,6 +118,21 @@ button {
     animation-timing-function: ease-out;
     animation-duration: 0.5s;
     animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+.greyed {
+    animation-name: greyed;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    cursor: not-allowed !important;
+}
+
+.highlighted {
+    animation-name: highlighted;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
     animation-fill-mode: both;
 }
 
@@ -148,7 +183,7 @@ button {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr minmax(500px, 3fr) 1fr;
-    grid-template-rows: 20px auto auto auto auto 20px;
+    grid-template-rows: 20px auto auto auto auto auto 20px;
 }
 
 #preview-header {
@@ -163,14 +198,6 @@ button {
     grid-template-columns: 1fr 1fr;
 }
 
-#last-selection {
-    grid-column: 2;
-    grid-row: 4;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr auto auto auto 1fr;
-}
-
 #submit-buttons {
     grid-column: 2;
     grid-row: 5;
@@ -178,18 +205,70 @@ button {
 
 .exercise {
     grid-column: 1 / 3;
+    margin: 10px;
     display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.exercise > h5 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.exercise > img {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.reps {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.exercise > h3 {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+}
+
+#divider {
+    grid-column: 1/3;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+#divider > .exercise {
+    margin: 10px 0;
+}
+
+#divider > hr {
+    display: block;
+    height: 2px;
+    width: 75%;
+    margin: auto;
+    color: var(--light-text);
+    background-color: var(--light-text);
+    grid-column: 1/3;
+}
+
+#divider > h4 {
+    grid-column: 1/3;
 }
 
 .explanation {
     text-align: left;
+    grid-column: 1/3;
+    grid-row: 3/4;
 }
 
 .selection {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 15px 1fr;
-    text-align: left;
     cursor: pointer;
 }
 

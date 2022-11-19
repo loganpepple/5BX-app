@@ -1,4 +1,4 @@
-const chartList = [1,2,3,4,5];
+const chartList = [1,2,3,4,5,6];
 const levelList = ['D-','D','D+','C-','C','C+','B-','B','B+','A-','A','A+'];
 const exerciseData = [
         {
@@ -27,11 +27,11 @@ const exerciseData = [
             ],
             "run": {
                 "distance": "1/2 mile",
-                "time": [8,7.5,7,6.5,6.5,6.5,6,6,6,5.5,5.5,5.5]
+                "time": [ 480, 450, 420, 390, 390, 390, 360, 360, 360, 330, 330, 330 ]
             },
             "walk": {
                 "distance": "1 mile",
-                "time": [21,21,20,19,19,19,18,18,18,17,17,17]
+                "time": [ 1260, 1260, 1200, 1140, 1140, 1140, 1080, 1080, 1080, 1020, 1020, 1020 ]
             }
         },
         {
@@ -60,11 +60,11 @@ const exerciseData = [
             ],
             "run": {
                 "distance": "1 mile",
-                "time": [10.5,10.5,10.5,10,10,10,9.5,9.5,9.5,9,9,9]
+                "time": [ 630, 630, 630, 600, 600, 600, 570, 570, 570, 540, 540, 540 ]
             },
             "walk": {
                 "distance": "2 miles",
-                "time": [35,35,35,34,34,34,33,33,33,32,31,30]
+                "time": [ 2100, 2100, 2100, 2040, 2040, 2040, 1980, 1980, 1980, 1920, 1860, 1800 ]
             }
         },
         {
@@ -93,11 +93,11 @@ const exerciseData = [
             ],
             "run": {
                 "distance": "1 mile",
-                "time": [8.75,8.75,8.75,8.5,8.5,8.5,8.25,8.25,8.25,8,8,8]
+                "time": [ 525, 525, 525, 510, 510, 510, 495, 495, 495, 480, 480, 480]
             },
             "walk": {
                 "distance": "2 miles",
-                "time": [29,28,28,27,27,27,26,26,26,25,25,25]
+                "time": [ 1740, 1680, 1680, 1620, 1620, 1620, 1560, 1560, 1560, 1500, 1500, 1500 ]
             }
         },
         {
@@ -126,11 +126,11 @@ const exerciseData = [
             ],
             "run": {
                 "distance": "1 mile",
-                "time": [7.75,7.75,7.75,7.5,7.5,7.5,7.25,7.25,7.25,7,7,7]
+                "time": [ 465, 465, 465, 450, 450, 450, 435, 435, 435, 420, 420, 420 ]
             },
             "walk": {
                 "distance": "2 miles",
-                "time": [23,23,23,21,21,21,20,20,20,19,19,19]
+                "time": [ 1380, 1380, 1380, 1260, 1260, 1260, 1200, 1200, 1200, 1140, 1140, 1140 ]
             }
         },
         {
@@ -159,7 +159,40 @@ const exerciseData = [
             ],
             "run": {
                 "distance": "1 mile",
-                "time": []
+                "time": [ 420, 411, 405, 399, 393, 387, 381, 375, 372, 369, 366, 360 ]
+            },
+            "walk": {
+                "distance": "n/a",
+                "time": [0]
+            }
+        },
+        {
+            "chart": 6,
+            "exercises": [
+                {
+                    "reps": [24,24,24,26,26,26,28,28,28,30,30,30],
+                    "description": ["• Feet astride, arms upward, hands reverse clasped, arms straight.", "• Touch floor outside left foot, between feet, press once then outside right foot, circle bend backwards as far as possible. Reverse direction after half the number of counts.", "• Keep hands tightly reverse clasped at all times."]
+                },
+                {
+                    "reps": [35,36,37,39,40,41,43,44,45,47,48,50],
+                    "description": ["• Back lying. legs straight, feet together, arms straight over the head", "• Sit up and at the same time lifting both legs to touch the toes in a pike (V) position.", "• Keep feet together, legs and arms straight, all of the upper back and legs clear floor, fingers touch toes each time."]
+                },
+                {
+                    "reps": [29,30,31,32,33,34,35,36,37,38,39,40],
+                    "description": ["• Front lying, arms extended over head", "• Raise arms, head, chest, and both legs as high as possible then press back once.", "• Keep legs and arms straight - chest and both thighs completely off floor."]
+                },
+                {
+                    "reps": [26,27,28,30,31,32,34,35,36,38,39,40],
+                    "description": ["• Front lying, hands under shoulders, palms flat on floor.", "• Push off floor and slap chest before returning to starting position.", "• Keep body straight during the entire movement, chest slap must be heard."]
+                },
+                {
+                    "reps": [300,315,325,335,345,355,365,375,380,390,395,400],
+                    "description": ["• Stationary run - (count a step each time left foot touches floor - lift knees waist high.) Every 75 steps do 10 \"jack jumps\". Repeat this until required number of steps is completed.", "• Jack jumps - feet toghether, knees bent, sit on heels, finger tips touch floor.", "• Jump up, raise legs waist high, keep legs straight and touch toes in midair.", "• Keeps legs straight, raise feet level to\"stainding waist height\". Touch toes each time."]
+                }
+            ],
+            "run": {
+                "distance": "1 mile",
+                "time": [ 360, 351, 345, 339, 333, 327, 324, 318, 312, 309, 303, 300]
             },
             "walk": {
                 "distance": "n/a",

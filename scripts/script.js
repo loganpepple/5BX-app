@@ -30,17 +30,33 @@ function loadPreview() {
         [...exerciseNodes].forEach((exerciseNode, exerciseNumber) => {
             $(exerciseNode).find('h3').text(exercises[exerciseNumber].reps[selectedLevel]);
             $(exerciseNode).find('.explanation').html(exercises[exerciseNumber].description.join('<br />'));
-            // todo: create workout images ex: `<img src='./chart-${chart-number}/${exercise}.png'></img>`
+            $(exerciseNode).find('img').attr('src', `./img/charts/chart-${selectedChart + 1}/exercise-${exerciseNumber}.png`);
         })
-        $('#run-div > h5').text(`${run.distance} run in`);
-        $('#run-div > h3').text(`${run.time[selectedLevel]} minutes`);
-        $('#walk-div > h5').text(`${walk.distance} walk in`);
-        $('#walk-div > h3').text(`${walk.time[selectedLevel]} minutes`);
+        $('#run-div > h5').text(`${run.distance} run`);
+        $('#run-div > h3').text(`${secToMin(run.time[selectedLevel])}`);
+
+        if (selectedChart < 4) {
+            $('#walk-div > h5').text(`${walk.distance} walk`);
+            $('#walk-div > h3').text(`${secToMin(walk.time[selectedLevel])}`);
+            $('.selection').click(function() {
+                $('.selection').find('span').text('radio_button_unchecked');
+                $(this).find('span').text('radio_button_checked');
+                finalExercise = this.label;
+            })
+        } else {
+            $('#walk-div > h5').text('no walk');
+            $('#walk-div > h3').text('0:00');
+            $('#walk-div').addClass('greyed');
+            $('#walk-button').addClass('greyed');
+            $('#walk-button').css('cursor', 'default')
+        }
 
         $('.selection').click(function() {
-            $('.selection').find('span').text('radio_button_unchecked');
-            $(this).find('span').text('radio_button_checked');
-            finalExercise = this.label;
+            if (!$(this).hasClass('greyed')) {
+                $('.selection').removeClass('highlighted')
+                $(this).addClass('highlighted');
+                finalExercise = this.label;
+            }
         })
 
         $('#cancel').click(function() {
@@ -82,6 +98,12 @@ function fadeOut(node) {
     console.log('fading');
     $(node).removeClass('fade-in').addClass('fade-out');
     setTimeout(function() {$(node).remove()}, 700);
+}
+
+function secToMin(seconds) {
+    let minutes = Math.floor(seconds/60) + ':' + (seconds%60)
+    if ((seconds%60).toString.length == 1) minutes += '0'
+    return minutes;
 }
 
 var selectedChart = 0;
