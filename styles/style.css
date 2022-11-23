@@ -182,7 +182,7 @@ button > h5 {
 #workout-preview {
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr minmax(500px, 3fr) 1fr;
+    grid-template-columns: 1fr minmax(500px, 733px) 1fr;
     grid-template-rows: 20px auto auto auto auto auto 20px;
 }
 
@@ -207,7 +207,7 @@ button > h5 {
     grid-column: 1 / 3;
     margin: 10px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: minmax(425px, 700px) auto;
     grid-template-rows: auto auto auto;
 }
 
@@ -230,6 +230,10 @@ button > h5 {
     grid-column: 2;
     grid-row: 2;
     align-self: center;
+}
+
+.exercise > img {
+    width: 700px;
 }
 
 #divider {

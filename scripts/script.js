@@ -35,6 +35,7 @@ function loadPreview() {
         $('#run-div > h5').text(`${run.distance} run`);
         $('#run-div > h3').text(`${secToMin(run.time[selectedLevel])}`);
 
+        // only charts 1 - 4 allow running
         if (selectedChart < 4) {
             $('#walk-div > h5').text(`${walk.distance} walk`);
             $('#walk-div > h3').text(`${secToMin(walk.time[selectedLevel])}`);
