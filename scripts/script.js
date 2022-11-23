@@ -16,6 +16,7 @@ function appStart() {
         $('#next').click(function() {
             fadeOut($('#difficulty-select'));
             setTimeout(function() {loadPreview()}, 700);
+            finalExercise = 'exercise';
         })
     });
     
