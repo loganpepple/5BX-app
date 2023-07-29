@@ -1,19 +1,16 @@
 {
   "name": "5bx-app",
-  "version": "1.0.0",
-  "description": "A modern exercise web app based on 5BX, a Canadian developed daily calisthenics program.",
-  "main": "src/app.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "jest"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/loganpepple/5BX.git"
-  },
-  "author": "Logan Pepple",
-  "license": "AGPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/loganpepple/5BX/issues"
-  },
-  "homepage": "https://github.com/loganpepple/5BX#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "jade": "^0.29.0",
+    "morgan": "~1.9.1"
+  }
 }
